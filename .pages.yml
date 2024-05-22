@@ -1,0 +1,15 @@
+media: 
+  input: public/images
+  output: images
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: content/blog
+    fields: # The fields for each document, usually in front matter
+      - { name: title, label: Title, type: string }
+      - { name: description, label: Description, type: string }
+      - { name: image, label: Cover Image, type: image }
+      - { name: date, label: Date, type: date }
+      - { name: featured, label: Recommended Post, type: boolean}
+      - { name: body, label: Body, type: rich-text }
