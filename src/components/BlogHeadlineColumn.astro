@@ -5,7 +5,7 @@ const {title, description, src} = Astro.props;
 ---
 
 <div class="flex flex-wrap justify-between gap-x-10 py-10">
-    <img class="w-full object-scale-down" src={src} alt="" />
+    <img class="w-full object-scale-down" src=`${import.meta.env.BASE_URL}/${src}` alt="" />
 
     <div class="flex flex-col w-full py-12 align-start">
         <h5>{title}</h5>
