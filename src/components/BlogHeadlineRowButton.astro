@@ -1,16 +1,16 @@
 ---
 import MarketingButton from "./MarketingButton.astro"
 
-const {title, description} = Astro.props;
+const {title, description, src, slug} = Astro.props;
 
 ---
 
 <div class="flex flex-wrap justify-between gap-x-10 py-10">
-    <img class="w-full sm:w-5/12 object-scale-down" src="blog-placeholder-2.jpg" alt="" />
+    <img class="w-full sm:w-5/12 object-scale-down" src={src} alt="" />
 
     <div class="flex flex-col w-full sm:w-5/12 py-12">
         <h5>{title}</h5>
         <p>{description}</p>
-        <MarketingButton />
+        <MarketingButton slug={slug}/>
     </div>
 </div>

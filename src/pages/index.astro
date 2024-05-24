@@ -9,6 +9,7 @@ import BlogHeadline from "../components/BlogHeadline.astro";
 import BlogHeadlineRowButton from "../components/BlogHeadlineRowButton.astro";
 import AllPostsGrid from "../components/AllPostsGrid.astro";
 import TiltedTitle from "../components/TiltedTitle.astro";
+import FeaturedPostsList from "../components/FeaturedPostsList.astro";
 
 const posts = (await getCollection("blog")).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
@@ -24,8 +25,7 @@ const posts = (await getCollection("blog")).sort(
 		<Header />
 		<main class="flex flex-col">
 			<BlogHeadline text="Ratgeber"/>
-			<BlogHeadlineRowButton title="Title" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."/>
-			<BlogHeadlineRowButton title="Title" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."/>
+			<FeaturedPostsList posts={posts} />
 			
 			<TiltedTitle text="Alle Artikel" />
 			<AllPostsGrid posts={posts}/>

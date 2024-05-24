@@ -1,0 +1,20 @@
+---
+import BlogHeadlineRowButton from "./BlogHeadlineRowButton.astro";
+
+const { posts } = Astro.props;
+---
+
+<div>
+    {
+        posts
+            .filter((post) => post.data.featured)
+            .map((post) => (
+                <BlogHeadlineRowButton
+                    title={post.data.title},
+                    description={post.data.description},
+                    src={post.data.heroImage},
+                    slug={post.slug},
+                />
+            ))
+    }
+</div>
