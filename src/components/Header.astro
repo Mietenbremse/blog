@@ -1,12 +1,14 @@
 ---
+import { getLangFromUrl } from '../i18n/utils';
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <header
 	class="bg-cipurple-1 h-20 flex flex-row justify-between items-center px-12"
 >
-	<HeaderLink class="text-ciyellow-1 hover:text-ciyellow-1" href="/blog">{SITE_TITLE}</HeaderLink>
+	<HeaderLink class="text-ciyellow-1 hover:text-ciyellow-1" href=`/blog/${lang}`>{SITE_TITLE}</HeaderLink>
 	<div class="flex flex-row items-center justify-end py-16">
 		<button class="bg-ciyellow-1 rounded-full text-cipurple-1 px-4 py-2 self-start">
 			Miete checken

@@ -1,0 +1,33 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { getCollection } from "astro:content";
+import BlogHeadline from "../../components/BlogHeadline.astro";
+import AllPostsGrid from "../../components/AllPostsGrid.astro";
+import TiltedTitle from "../../components/TiltedTitle.astro";
+import FeaturedPostsList from "../../components/FeaturedPostsList.astro";
+
+const posts = (await getCollection("blog")).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main class="flex flex-col">
+			<BlogHeadline text="Ratgeber"/>
+			<FeaturedPostsList posts={posts} />
+			
+			<TiltedTitle text="Alle Artikel" />
+			<AllPostsGrid posts={posts}/>
+		</main>
+		<Footer />
+	</body>
+</html>
