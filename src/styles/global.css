@@ -1,233 +1,296 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
 
-	/* Base Colors */
-	--color-white: #ffffff;
+@layer base {
+	@font-face {
+		font-family: "Suisse Intl";
+		font-weight: 400;
+		src: url(/blog/fonts/SuisseIntl-Regular-WebM.woff2) format("woff2");
+		display: swap;
+	}
 
-	--color-gray-1: #f7f7f7;
-	--color-gray-2: #f2f2f2;
-	--color-gray-3: #ededed;
-	--color-gray-4: #e8e8e8;
-	--color-gray-5: #e3e3e3;
-	--color-gray-6: #e2e2e2;
-	--color-gray-7: #c7c7c7;
-	--color-gray-8: #b2b2b2;
-	--color-gray-9: #8f8f8f;
-	--color-gray-10: #858585;
-	--color-gray-11: #6f6f6f;
-	--color-gray-12: #171717;
+	@font-face {
+		font-family: "Suisse Intl";
+		font-weight: 450;
+		src: url(/blog/fonts/SuisseIntl-Book-WebM.woff2) format("woff2");
+		display: swap;
+	}
 
-	--color-purple-1: #FFFCFE;
-	--color-purple-2: #FDF7FB;
-	--color-purple-3: #FBEBF5;
-	--color-purple-4: #F8DEED;
-	--color-purple-5: #F3D1E5;
-	--color-purple-6: #ECC2DB;
-	--color-purple-7: #E3ADCD;
-	--color-purple-8: #D891BD;
-	--color-purple-9: #811C62;
-	--color-purple-10: #6E0253;
-	--color-purple-11: #A33E80;
-	--color-purple-12: #5D194C;
+	@font-face {
+		font-family: "Suisse Intl";
+		font-weight: 500;
+		src: url(/blog/fonts/SuisseIntl-Medium-WebM.woff2) format("woff2");
+		display: swap;
+	}
 
-	/* DWE Colors */
-	--dwe-yellow: #fdd816;
-	--dwe-purple: #811c62;
-	--dwe-black: #333;
-	--dwe-red: #e24343;
-	--dwe-green: #69dd57;
-	--dwe-verylightgrey: #efefef;
+	@font-face {
+		font-family: "Suisse Intl";
+		font-weight: 600;
+		src: url(/blog/fonts/SuisseIntl-SemiBold-WebM.woff2) format("woff2");
+		display: swap;
+	}
 
-	/* Text Colors */
-	--text-neutral: var(--color-gray-12);
-	--text-neutral-faded: var(--color-gray-11);
-	--text-primary: var(--color-purple-11);
-	--text-on-neutral: var(--color-white);
-	--text-on-primary: var(--color-white);
+	:root {
+		/* Base Colors */
+		--color-white: #ffffff;
 
-	/* Background Colors */
-	--bg-page: var(--color-white);
-	--bg-page-faded: var(--color-gray-1);
+		--color-gray-1: #f7f7f7;
+		--color-gray-2: #f2f2f2;
+		--color-gray-3: #ededed;
+		--color-gray-4: #e8e8e8;
+		--color-gray-5: #e3e3e3;
+		--color-gray-6: #e2e2e2;
+		--color-gray-7: #c7c7c7;
+		--color-gray-8: #b2b2b2;
+		--color-gray-9: #8f8f8f;
+		--color-gray-10: #858585;
+		--color-gray-11: #6f6f6f;
+		--color-gray-12: #171717;
 
-	--bg-neutral: var(--color-gray-3);
-	--bg-neutral-hover: var(--color-gray-4);
-	--bg-neutral-active: var(--color-gray-5);
-	--bg-neutral-solid: var(--color-gray-9);
-	--bg-neutral-solid-hover: var(--color-gray-10);
-	--bg-neutral-solid-active: var(--color-gray-11);
+		--color-purple-1: #FFFCFD;
+		--color-purple-2: #FFF7F9;
+		--color-purple-3: #FFE8F2;
+		--color-purple-4: #FFDAEB;
+		--color-purple-5: #FBCBE0;
+		--color-purple-6: #F4BDD2;
+		--color-purple-7: #EBAAC6;
+		--color-purple-8: #E194B4;
+		--color-purple-9: #811C63;
+		--color-purple-10: #6E0253;
+		--color-purple-11: #811C63;
+		--color-purple-12: #6A004F;
 
-	--bg-primary: var(--color-purple-3);
-	--bg-primary-hover: var(--color-purple-4);
-	--bg-primary-active: var(--color-purple-5);
-	--bg-primary-solid: var(--color-purple-9);
-	--bg-primary-solid-hover: var(--color-purple-10);
-	--bg-primary-solid-active: var(--color-purple-11);
+		--color-yellow-9: #FDD817;
+		--color-yellow-10: #F0CC0F;
+		--color-yellow-11: #FDD817;
 
-	/* Border Colors */
-	--border-neutral-subtle: var(--color-gray-6);
-	--border-neutral: var(--color-gray-7);
-	--border-neutral-hover: var(--color-gray-8);
-	--border-neutral-solid: var(--color-gray-9);
-	--border-neutral-solid-hover: var(--color-gray-10);
+		/* DWE Colors */
+		--dwe-yellow: #fdd816;
+		--dwe-purple: #811c62;
+		--dwe-black: #333;
+		--dwe-red: #e24343;
+		--dwe-green: #69dd57;
+		--dwe-verylightgrey: #efefef;
 
-	--border-primary-subtle: #var(--color-purple-6);
-	--border-primary: var(--color-purple-7);
-	--border-primary-hover: var(--color-purple-8);
-	--border-primary-solid: var(--color-purple-9);
-	--border-primary-solid-hover: var(--color-purple-10);
+		/* Text Colors */
+		--text-neutral: var(--color-gray-12);
+		--text-neutral-faded: var(--color-gray-11);
+		--text-primary: var(--color-purple-11);
+		--text-on-neutral: var(--color-white);
+		--text-on-primary: var(--color-white);
 
-	/* Ring Colors */
-	--ring-primary: var(--color-purple-5);
+		/* Background Colors */
+		--bg-page: var(--color-white);
+		--bg-page-faded: var(--color-gray-1);
+
+		--bg-neutral: var(--color-gray-3);
+		--bg-neutral-hover: var(--color-gray-4);
+		--bg-neutral-active: var(--color-gray-5);
+		--bg-neutral-solid: var(--color-gray-9);
+		--bg-neutral-solid-hover: var(--color-gray-10);
+		--bg-neutral-solid-active: var(--color-gray-11);
+
+		--bg-primary: var(--color-purple-3);
+		--bg-primary-hover: var(--color-purple-4);
+		--bg-primary-active: var(--color-purple-5);
+		--bg-primary-solid: var(--color-purple-9);
+		--bg-primary-solid-hover: var(--color-purple-10);
+		--bg-primary-solid-active: var(--color-purple-11);
+
+		/* Border Colors */
+		--border-neutral-subtle: var(--color-gray-6);
+		--border-neutral: var(--color-gray-7);
+		--border-neutral-hover: var(--color-gray-8);
+		--border-neutral-solid: var(--color-gray-9);
+		--border-neutral-solid-hover: var(--color-gray-10);
+
+		--border-primary-subtle: #var(--color-purple-6);
+		--border-primary: var(--color-purple-7);
+		--border-primary-hover: var(--color-purple-8);
+		--border-primary-solid: var(--color-purple-9);
+		--border-primary-solid-hover: var(--color-purple-10);
+
+		/* Ring Colors */
+		--ring-primary: var(--color-purple-5);
+	}
+
+	:root[data-theme="old"] {
+		--color-gray-1: #f7f7f7;
+		--color-gray-2: #f2f2f2;
+		--color-gray-3: #ededed;
+		--color-gray-4: #e8e8e8;
+		--color-gray-5: #e3e3e3;
+		--color-gray-6: #e2e2e2;
+		--color-gray-7: #c7c7c7;
+		--color-gray-8: #b2b2b2;
+		--color-gray-9: #8f8f8f;
+		--color-gray-10: #858585;
+		--color-gray-11: #6f6f6f;
+		--color-gray-12: #171717;
+
+		--color-purple-1: #fefcfe;
+		--color-purple-2: #fdfaff;
+		--color-purple-3: #f9f1fe;
+		--color-purple-4: #f3e7fc;
+		--color-purple-5: #eddbf9;
+		--color-purple-6: #e3ccf4;
+		--color-purple-7: #c094e5;
+		--color-purple-8: #ac74dc;
+		--color-purple-9: #8e4ec6;
+		--color-purple-10: #8445bc;
+		--color-purple-11: #793aaf;
+		--color-purple-12: #2b0e44;
+	}
+
+
 }
 
-@font-face {
-	font-family: 'SuisseIntl';
-	src: url('/blog/fonts/SuisseIntl-Regular-WebM.woff2') format('woff2');
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
+@layer components {
+	.text-sm {
+		@apply text-sm/[20px] font-400;
+	}
+
+	.text-sm-book {
+		@apply text-sm/[20px] font-450;
+	}
+
+	.text-sm-medium {
+		@apply text-sm/[20px] font-500;
+	}
+
+	.text-base {
+		@apply text-base/[24px] font-400;
+	}
+
+	.text-base-book {
+		@apply text-base/[24px] font-450;
+	}
+
+	.text-base-medium {
+		@apply text-base/[24px] font-500;
+	}
+
+	.text-lg {
+		@apply text-lg/[27px] font-400;
+	}
+
+	.text-lg-book {
+		@apply text-lg/[27px] font-450;
+	}
+
+	.text-lg-medium {
+		@apply text-lg/[27px] font-500;
+	}
+
+	.text-xl {
+		@apply text-xl/[30px] font-400;
+	}
+
+	.text-xl-book {
+		@apply text-xl/[30px] font-450;
+	}
+
+	.text-xl-medium {
+		@apply text-xl/[30px] font-500;
+	}
+
+	.heading-16 {
+		@apply text-base/[22px] font-500;
+	}
+
+	.heading-18 {
+		@apply text-lg/[24px] font-500;
+	}
+
+	.heading-20 {
+		@apply text-xl/[28px] font-500;
+	}
+
+	.heading-22 {
+		@apply text-[22px]/[30px] font-500;
+	}
+
+	.heading-24 {
+		@apply text-2xl/[32px] font-500;
+	}
+
+	.heading-28 {
+		@apply text-3xl/[34px] font-500;
+	}
+
+	.title-16 {
+		@apply text-base/[132%] font-600;
+	}
+
+	.title-18 {
+		@apply text-lg/[132%] font-600;
+	}
+
+	.title-20 {
+		@apply text-xl/[132%] font-600;
+	}
+
+	.title-24 {
+		@apply text-2xl/[132%] font-600;
+	}
+
+	.title-28 {
+		@apply text-3xl/[132%] font-600;
+	}
+
+	.title-32 {
+		@apply text-4xl/[120%] font-600;
+	}
+
+	.title-36 {
+		@apply text-5xl/[120%] font-600;
+	}
+
+	.title-40 {
+		@apply text-6xl/[120%] font-600;
+	}
+
+	.title-44 {
+		@apply text-7xl/[120%] font-600;
+	}
+
+	.title-48 {
+		@apply text-8xl/[120%] font-600;
+	}
+
+	.title-52 {
+		@apply text-9xl/[110%] font-600;
+	}
+
+	.title-56 {
+		@apply text-10xl/[110%] font-600;
+	}
+
+	.title-60 {
+		@apply text-11xl/[110%] font-600;
+	}
+
+	.title-64 {
+		@apply text-12xl/[110%] font-600;
+	}
+
+	.title-68 {
+		@apply text-13xl/[110%] font-600;
+	}
+
+	.title-72 {
+		@apply text-14xl/[110%] font-600;
+	}
+}
+
+* {
+	@apply box-border;
 }
 
 body {
-	font-family: 'SuisseIntl', sans-serif;
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	background: var(--bg-page);
-	background-size: 100% 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
-}
-
-main {
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: var(--dwe-purple);
-	line-height: 1.2;
-}
-
-h1 {
-	font-size: 3.052em;
-}
-
-h2 {
-	font-size: 2.441em;
-}
-
-h3 {
-	font-size: 1.953em;
-}
-
-h4 {
-	font-size: 1.563em;
-}
-
-h5 {
-	font-size: 1.25em;
-}
-
-strong,
-b {
-	font-weight: 700;
-}
-
-a {
-	color: var(--accent);
-}
-
-a:hover {
-	color: var(--accent);
-}
-
-p {
-	color: var(--dwe-purple);
-}
-
-.prose p {
-	margin-bottom: 2em;
-}
-
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
-
-input {
-	font-size: 16px;
-}
-
-table {
-	width: 100%;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 8px;
-}
-
-code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
-}
-
-pre {
-	padding: 1.5em;
-	border-radius: 8px;
-}
-
-pre>code {
-	all: unset;
-}
-
-blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0px;
-	font-size: 1.333em;
-}
-
-hr {
-	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
-}
-
-@media (max-width: 720px) {
-	body {
-		font-size: 18px;
-	}
-
-	main {
-		padding: 1em;
-	}
+	@apply font-body font-400 text-gray-12 antialiased;
 }
 
 .sr-only {
