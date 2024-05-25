@@ -12,5 +12,12 @@ export default defineConfig({
     // Beispiel: Erlaubt das Verwenden verschachtelter CSS Deklarationen
     // neben dem Tailwind Syntax
     nesting: true,
-  }),]
+  }),],
+  i18n: {
+    defaultLocale: "de",
+    locales: ["de", "en", ],
+    routing: {
+      prefixDefaultLocale: true
+  }
+  }
 });

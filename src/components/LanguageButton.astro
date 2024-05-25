@@ -1,0 +1,19 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+function getReplacementLanguage() {
+    console.log("lang: " + lang)
+    if (lang == "en"){
+        return "de";
+    }
+    else {
+        return "en";
+    }
+}
+const replacement = getReplacementLanguage()
+---
+<button class="bg-cipurple-1 border-ciyellow-1 border-2 rounded-full text-white px-4 py-2 self-start" type="button" onclick=`window.location.assign(window.location.href.replace('/${lang}', '/${replacement}'))`>
+    <p class="text-ciyellow-1">{t('language.label')}</p>
+</button>

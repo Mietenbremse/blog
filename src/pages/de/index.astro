@@ -8,14 +8,18 @@ import BlogHeadline from "../../components/BlogHeadline.astro";
 import AllPostsGrid from "../../components/AllPostsGrid.astro";
 import TiltedTitle from "../../components/TiltedTitle.astro";
 import FeaturedPostsList from "../../components/FeaturedPostsList.astro";
+import { getLangFromUrl } from "../../i18n/utils";
 
-const posts = (await getCollection("blog")).sort(
+const posts = (await getCollection("blog", ({ slug }) => {
+	console.log("slug: " + slug)
+  return slug.includes(getLangFromUrl(Astro.url)+"/")
+})).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
 );
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="de">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
