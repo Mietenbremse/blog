@@ -53,6 +53,44 @@ export default {
 			"700": "700",
 		},
 		extend: {
+			typography: (theme) => ({
+				purple: {
+					css: {
+						'--tw-prose-body': theme('colors.purple.11'),
+						'--tw-prose-headings': theme('colors.purple.11'),
+						'--tw-prose-lead': theme('colors.purple.11'),
+						'--tw-prose-links': theme('colors.purple.11'),
+						'--tw-prose-bold': theme('colors.purple.11'),
+						'--tw-prose-counters': theme('colors.purple.11'),
+						'--tw-prose-bullets': theme('colors.purple.11'),
+						'--tw-prose-hr': theme('colors.purple.6'),
+						'--tw-prose-quotes': theme('colors.purple.11'),
+						'--tw-prose-quote-borders': theme('colors.purple.6'),
+						'--tw-prose-captions': theme('colors.purple.11'),
+						'--tw-prose-code': theme('colors.purple.11'),
+						'--tw-prose-pre-code': theme('colors.purple.3'),
+						'--tw-prose-pre-bg': theme('colors.purple.11'),
+						'--tw-prose-th-borders': theme('colors.purple.6'),
+						'--tw-prose-td-borders': theme('colors.purple.6'),
+						'--tw-prose-invert-body': theme('colors.purple.6'),
+						'--tw-prose-invert-headings': theme('colors.white'),
+						'--tw-prose-invert-lead': theme('colors.purple.6'),
+						'--tw-prose-invert-links': theme('colors.white'),
+						'--tw-prose-invert-bold': theme('colors.white'),
+						'--tw-prose-invert-counters': theme('colors.purple.11'),
+						'--tw-prose-invert-bullets': theme('colors.purple.11'),
+						'--tw-prose-invert-hr': theme('colors.purple.11'),
+						'--tw-prose-invert-quotes': theme('colors.purple.3'),
+						'--tw-prose-invert-quote-borders': theme('colors.purple.11'),
+						'--tw-prose-invert-captions': theme('colors.purple.11'),
+						'--tw-prose-invert-code': theme('colors.white'),
+						'--tw-prose-invert-pre-code': theme('colors.purple.6'),
+						'--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
+						'--tw-prose-invert-th-borders': theme('colors.purple.11'),
+						'--tw-prose-invert-td-borders': theme('colors.purple.11'),
+					},
+				},
+			}),
 			colors: {
 				gray: {
 					"1": "var(--color-gray-1)",
@@ -185,5 +223,7 @@ export default {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/typography'),
+	],
 }

@@ -1,0 +1,41 @@
+---
+import FeaturedBlogPostPreview from "./FeaturedBlogPostPreview.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const { posts } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section>
+  <div class="container pt-16 pb-20 space-y-20 sm:space-y-24">
+    <div class="space-y-12">
+      <h2
+        class="title-40 sm:title-44 md:title-48 lg:title-56 text-purple-11 text-center"
+      >
+        <span
+          class="inline-block px-4 py-3 transform -rotate-6 bg-yellow-9 text-purple-11"
+        >
+          {t("Ratgeber")}
+        </span>
+      </h2>
+      <p class="text-xl-book text-purple-11 max-w-xl text-center mx-auto">
+        {t("Ratgeber Text")}
+      </p>
+    </div>
+    <div class="max-w-[960px] mx-auto space-y-16">
+      {
+        posts
+          .filter((post) => post.data.featured)
+            .map((post) => (
+              <FeaturedBlogPostPreview
+              title={post.data.title},
+              description={post.data.description},
+              src={post.data.heroImage},
+              slug={post.slug},
+          />
+        ))
+      }
+  </div>
+  </div>
+</section>

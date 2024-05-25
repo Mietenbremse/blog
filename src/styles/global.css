@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+	@apply box-border;
+}
+
+body {
+	@apply font-body font-400 text-purple-11 antialiased;
+}
+
 
 @layer base {
 	@font-face {
@@ -143,8 +151,6 @@
 		--color-purple-11: #793aaf;
 		--color-purple-12: #2b0e44;
 	}
-
-
 }
 
 @layer components {
@@ -232,6 +238,10 @@
 		@apply text-xl/[132%] font-600;
 	}
 
+	.title-22 {
+		@apply text-[22px]/[132%] font-600;
+	}
+
 	.title-24 {
 		@apply text-2xl/[132%] font-600;
 	}
@@ -283,14 +293,6 @@
 	.title-72 {
 		@apply text-14xl/[110%] font-600;
 	}
-}
-
-* {
-	@apply box-border;
-}
-
-body {
-	@apply font-body font-400 text-gray-12 antialiased;
 }
 
 .sr-only {

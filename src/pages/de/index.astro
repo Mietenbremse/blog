@@ -2,20 +2,18 @@
 import BaseHead from "../../components/BaseHead.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import FeaturedBlogPostsSection from "../../components/FeaturedBlogPostsSection.astro";
+import BlogPostsGridSection from "../../components/BlogPostsGridSection.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
-import BlogHeadline from "../../components/BlogHeadline.astro";
-import AllPostsGrid from "../../components/AllPostsGrid.astro";
-import TiltedTitle from "../../components/TiltedTitle.astro";
-import FeaturedPostsList from "../../components/FeaturedPostsList.astro";
 import { getLangFromUrl } from "../../i18n/utils";
 
-const posts = (await getCollection("blog", ({ slug }) => {
-	console.log("slug: " + slug)
-  return slug.includes(getLangFromUrl(Astro.url)+"/")
-})).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
-);
+const posts = (
+	await getCollection("blog", ({ slug }) => {
+		console.log("slug: " + slug);
+		return slug.includes(getLangFromUrl(Astro.url) + "/");
+	})
+).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
 ---
 
 <!doctype html>
@@ -25,12 +23,9 @@ const posts = (await getCollection("blog", ({ slug }) => {
 	</head>
 	<body>
 		<Header />
-		<main class="flex flex-col">
-			<BlogHeadline text="Ratgeber"/>
-			<FeaturedPostsList posts={posts} />
-			
-			<TiltedTitle text="Alle Artikel" />
-			<AllPostsGrid posts={posts}/>
+		<main>
+			<FeaturedBlogPostsSection posts={posts} />
+			<BlogPostsGridSection posts={posts} />
 		</main>
 		<Footer />
 	</body>

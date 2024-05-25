@@ -1,0 +1,35 @@
+---
+import BlogPostPreview from "./BlogPostPreview.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const { posts } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section>
+  <div class="container py-20 space-y-20">
+    <h2
+      class="title-32 sm:title-36 md:title-40 lg:title-44 text-purple-11 text-center"
+    >
+      <span
+        class="inline-block px-4 py-3 transform -rotate-6 bg-yellow-9 text-purple-11"
+      >
+        {t("Alle Artikel")}
+      </span>
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-10 gap-y-16">
+      {
+        posts.map((post) => (
+          <a href={`/blog/${post.slug}/`}>
+            <BlogPostPreview
+              title={post.data.title}
+              description={post.data.description}
+              src={post.data.heroImage}
+            />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+---
+import MarketingButton from "./MarketingButton.astro";
+
+const { title, description, src, slug } = Astro.props;
+---
+
+<a
+    class="flex flex-col justify-between gap-6 md:flex-row md:gap-10"
+    href={`/blog/${slug}`}
+>
+    <div class="w-full lg:pr-4">
+        <img
+            class="w-full aspect-[8/5] object-cover"
+            src=`${import.meta.env.BASE_URL}/${src}`
+            alt=""
+        />
+    </div>
+
+    <div class="w-full flex flex-col justify-center">
+        <h3 class="title-24 mb-3 md:title-28">{title}</h3>
+        <p class="text-lg-book mb-8">{description}</p>
+        <MarketingButton />
+    </div>
+</a>

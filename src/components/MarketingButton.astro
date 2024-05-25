@@ -1,9 +1,14 @@
 ---
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
-const {slug} = Astro.props;
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+const { slug } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
 ---
-<button class="bg-cipurple-1 rounded-full text-white px-4 py-2 self-start" type="button" onclick=`location.href='/blog/${slug}'`>
+
+<button
+    class="bg-purple-9 text-base-book rounded-full text-white px-4 py-3 self-start hover:bg-purple-10"
+    type="button"
+    onclick=`location.href='/blog/${slug}'`
+>
     Artikel Lesen
 </button>
