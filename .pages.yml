@@ -12,7 +12,17 @@ content:
       - { name: heroImage, label: Cover Image, type: image }
       - { name: pubDate, label: Date, type: date }
       - { name: featured, label: Recommended Post, type: boolean}
+      - name: category
+        type: select
+        label: Kategorie
+        options:
+            values: 
+              - value: mietpreisbremse
+                label: Mietpreisbremse
+              - value: get_involved
+                label: Aktiv werden
       - { name: body, label: Body, type: rich-text }
+      
   - name: en-posts
     label: Posts (EN)
     type: collection
@@ -23,4 +33,13 @@ content:
       - { name: heroImage, label: Cover Image, type: image }
       - { name: pubDate, label: Date, type: date }
       - { name: featured, label: Recommended Post, type: boolean}
+      - name: category
+        type: select
+        label: Kategorie
+        options:
+            values: 
+              - value: mietpreisbremse
+                label: Mietpreisbremse
+              - value: get_involved
+                label: Get Involved
       - { name: body, label: Body, type: rich-text }
