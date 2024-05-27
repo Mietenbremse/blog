@@ -7,6 +7,7 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://blog.mietencheck.de',
+  base: '',
   integrations: [mdx(), sitemap(), tailwind({
     // Beispiel: Erlaubt das Verwenden verschachtelter CSS Deklarationen
     // neben dem Tailwind Syntax
