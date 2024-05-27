@@ -23,7 +23,7 @@ const t = useTranslations(lang);
     >
       {
         posts.map((post) => (
-          <a href={`/blog/${post.slug}/`}>
+          <a href={`${post.slug}/`}>
             <BlogPostPreview
               title={post.data.title}
               description={post.data.description}
