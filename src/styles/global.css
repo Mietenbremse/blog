@@ -15,28 +15,28 @@ body {
 	@font-face {
 		font-family: "Suisse Intl";
 		font-weight: 400;
-		src: url(/blog/fonts/SuisseIntl-Regular-WebM.woff2) format("woff2");
+		src: url(/fonts/SuisseIntl-Regular-WebM.woff2) format("woff2");
 		display: swap;
 	}
 
 	@font-face {
 		font-family: "Suisse Intl";
 		font-weight: 450;
-		src: url(/blog/fonts/SuisseIntl-Book-WebM.woff2) format("woff2");
+		src: url(/fonts/SuisseIntl-Book-WebM.woff2) format("woff2");
 		display: swap;
 	}
 
 	@font-face {
 		font-family: "Suisse Intl";
 		font-weight: 500;
-		src: url(/blog/fonts/SuisseIntl-Medium-WebM.woff2) format("woff2");
+		src: url(/fonts/SuisseIntl-Medium-WebM.woff2) format("woff2");
 		display: swap;
 	}
 
 	@font-face {
 		font-family: "Suisse Intl";
 		font-weight: 600;
-		src: url(/blog/fonts/SuisseIntl-SemiBold-WebM.woff2) format("woff2");
+		src: url(/fonts/SuisseIntl-SemiBold-WebM.woff2) format("woff2");
 		display: swap;
 	}
 
