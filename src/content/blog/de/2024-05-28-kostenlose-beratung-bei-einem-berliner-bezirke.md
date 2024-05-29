@@ -1,6 +1,6 @@
 ---
 title: Kostenlose Beratung in den Berliner Bezirken
-description: Lorem ipsum dolor sit amet
+description: ""
 heroImage: images/beratung-durch-bezirk.png
 pubDate: 2024-05-28
 featured: false

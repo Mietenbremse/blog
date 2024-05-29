@@ -1,11 +1,12 @@
 ---
 title: Kostenlose Beratung beim Berliner Mieterverein oder einer anderen
   Mieter*innenvereinigung
-description: Lorem ipsum dolor sit amet
+description: ""
 heroImage: images/beratung-durch-mieterverein.png
 pubDate: 2024-05-28
 featured: false
 ---
+
 In Berlin gibt es viele Mieter\*innenorganisationen. Die drei größten sind der Berliner Mieterverein, die Berliner Mietergemeinschaft und der Mieterschutzbund Berlin. Sie bieten in allen Berliner Bezirken wöchentlich Mietrechtsberatungen an. Die Beratungen sind für Mitglieder kostenlos. Die Beratung muss meistens telefonisch vereinbart werden.
 
 In der Beratung können Anwält\*innen der Mieter\*innen-Organisationen dir helfen. Sie schauen sich dein Ergebnis an, beantworten deine Fragen und beraten dich zu den nächsten Schritten.

@@ -8,22 +8,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import { getLangFromUrl } from "../../i18n/utils";
 
+const lang = getLangFromUrl(Astro.url);
 const posts = (await getCollection("blog"))
-	.filter((post) => post.slug.includes(getLangFromUrl(Astro.url)))
-	.sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+  .filter((post) => post.slug.startsWith(lang))
+  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main class="flex flex-col">
-			<FeaturedBlogPostsSection posts={posts} />
-			<BlogPostsGridSection posts={posts} />
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="flex flex-col">
+      <FeaturedBlogPostsSection posts={posts} />
+      <BlogPostsGridSection posts={posts} />
+    </main>
+    <Footer />
+  </body>
 </html>
