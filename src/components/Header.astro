@@ -5,27 +5,28 @@ import { SITE_TITLE } from "../consts";
 import LanguageButton from "./LanguageButton.astro";
 const lang = getLangFromUrl(Astro.url);
 let menu = false;
-
-const button = document.getElementById("togglemenu");
-const header = document.getElementsByTagName("header")[0];
-const mobilenav = document.getElementById("mobilenav");
-button?.addEventListener("click", () => {
-  if (mobilenav?.classList.contains("hidden")) {
-    mobilenav.classList.remove("hidden");
-    mobilenav.classList.add("flex");
-
-    header.classList.remove("bg-purple-9");
-    header.classList.add("bg-purple-10");
-  } else {
-    mobilenav?.classList.remove("flex");
-    mobilenav?.classList.add("hidden");
-
-    header.classList.remove("bg-purple-10");
-    header.classList.add("bg-purple-9");
-  }
-});
 ---
 
+<script>
+  const button = document.getElementById("togglemenu");
+  const header = document.getElementsByTagName("header")[0];
+  const mobilenav = document.getElementById("mobilenav");
+  button?.addEventListener("click", () => {
+    if (mobilenav?.classList.contains("hidden")) {
+      mobilenav.classList.remove("hidden");
+      mobilenav.classList.add("flex");
+
+      header.classList.remove("bg-purple-9");
+      header.classList.add("bg-purple-10");
+    } else {
+      mobilenav?.classList.remove("flex");
+      mobilenav?.classList.add("hidden");
+
+      header.classList.remove("bg-purple-10");
+      header.classList.add("bg-purple-9");
+    }
+  });
+</script>
 <header class="sticky left-0 right-0 top-0 bg-purple-9 z-50">
   <div class="container flex justify-between items-center py-4">
     <a href="https://mietencheck.de/" class="title-16 text-yellow-11"
