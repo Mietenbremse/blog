@@ -1,10 +1,11 @@
 ---
 title: Kostenpflichtige Beratung durch Rechtsanwält*in
-description: Lorem ipsum dolor sit amet
+description: ""
 heroImage: images/beratung-durch-rechtsanwalt.png
 pubDate: 2024-05-28
 featured: false
 ---
+
 Häufig ist das Hinzuziehen eines\*einer Rechtsanwält\*in sinnvoll. Bald findest du hier eine Liste mit Anwält\*innen, die auf Mietrecht spezialisiert sind. Ruf dort an und mach einen Beratungstermin aus.
 
 Das kostet Geld, aber vielleicht hast du eine Rechtsschutzversicherung. Wenn du eine Privatrechtsschutzversicherung hast, in der der Baustein „Wohnen“ enthalten ist, dann übernimmt die Versicherung die Kosten für die anwaltliche Beratung. Wenn du die Versicherung abgeschlossen hast, bevor du den Mietvertrag unterschrieben hast, dann übernimmt sie auch die Kosten, wenn du dich entscheidest, mit deinem Fall vor Gericht zu gehen. Am besten klärst du diese Fragen direkt mit deiner Versicherung, bevor du mit einer\*einem Anwält\*in Kontakt aufnimmst.

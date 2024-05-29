@@ -2,17 +2,10 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import BlogPost from "../../layouts/BlogPost.astro";
 
-
 export async function getStaticPaths() {
-  const pages = await getCollection("blog", ({ id }) => {
-    return id.startsWith("en/");
-  });
-
+  const pages = await getCollection("blog", ({ id }) => id.startsWith("en/"));
   const paths = pages.map((page) => {
     const [lang, ...slug] = page.slug.split("/");
-    console.log("page:");
-    console.log(slug);
-
     return { params: { lang, slug: slug.join("/") || undefined }, props: page };
   });
   return paths;
