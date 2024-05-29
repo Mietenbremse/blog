@@ -23,5 +23,6 @@ export default defineConfig({
       prefixDefaultLocale: true,
     },
   },
-  redirects: { "/": "/de" },
+  // soft redirect, just in case we ever want to change this
+  redirects: { "/": { status: 302, destination: "/de" } },
 });
