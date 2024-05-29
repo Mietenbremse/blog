@@ -1,10 +1,8 @@
 ---
-import { getLangFromUrl } from "../i18n/utils";
-import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "../consts";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import LanguageButton from "./LanguageButton.astro";
 const lang = getLangFromUrl(Astro.url);
-let menu = false;
+const t = useTranslations(lang);
 ---
 
 <script>
@@ -48,13 +46,13 @@ let menu = false;
           href={`/${lang}`}
           class="text-base-medium text-yellow-11 hover:underline"
         >
-          Ratgeber
+          {t("Ratgeber")}
         </a>
         <a
           href="https://mietencheck.de/ueber-uns"
           class="text-base-medium text-yellow-11 hover:underline"
         >
-          Über Uns
+          {t("Über uns")}
         </a>
       </div>
       <div class="flex gap-3">
@@ -63,7 +61,7 @@ let menu = false;
           class="inline-block px-3 py-2.5 bg-yellow-9 text-purple-11 text-base-medium border-2 border-yellow-9 rounded-full hover:bg-yellow-10 hover:border-yellow-10"
           href="https://mietencheck.de/schnelltest"
         >
-          Miete checken
+          {t("Miete checken")}
         </a>
       </div>
     </nav>
@@ -76,20 +74,20 @@ let menu = false;
       href={`/${lang}`}
       class="block py-3 text-base-medium text-yellow-11 hover:underline"
     >
-      Ratgeber
+      {t("Ratgeber")}
     </a>
     <a
       href="https://mietencheck.de/ueber-uns"
       class="block py-3 text-base-medium text-yellow-11 hover:underline"
     >
-      Über Uns
+      {t("Über uns")}
     </a>
     <div class="w-full py-3">
       <a
         class="block px-3 py-2.5 bg-yellow-9 text-purple-11 text-base-medium border-2 border-yellow-9 rounded-full hover:bg-yellow-10 hover:border-yellow-10"
         href="https://mietencheck.de/schnelltest"
       >
-        Miete checken
+        {t("Miete checken")}
       </a>
     </div>
   </div>

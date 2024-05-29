@@ -1,5 +1,7 @@
 ---
-const today = new Date();
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="bg-yellow-9">
@@ -21,10 +23,10 @@ const today = new Date();
 		<div class="flex flex-wrap gap-4 justify-center sm:gap-6">
 			{
 				[
-					{ label: "Ratgeber", href: "/" },
-					{ label: "Über Uns", href: "https://mietencheck.de/ueber-uns" },
-					{ label: "Mitmachen", href: "/" },
-					{ label: "Kontakt", href: "/" },
+					{ label: t("Ratgeber"), href: "/" },
+					{ label: t("Über uns"), href: "https://mietencheck.de/ueber-uns" },
+					{ label: t("Mitmachen"), href: "/" },
+					{ label: t("Kontakt"), href: "/" },
 				].map((item) => (
 					<a
 						class="inline-block flex-shrink-0 px-4 py-2.5 bg-yellow-9 text-purple-11 text-base-book rounded-full hover:bg-yellow-10 sm:text-lg-book"
@@ -45,11 +47,17 @@ const today = new Date();
 	</div>
 	<div class="bg-purple-10">
 		<div class="container py-8 text-center space-x-8">
-			<a class="text-base-medium text-yellow-11 hover:underline" href="">
-				Datenschutz
+			<a
+				class="text-base-medium text-yellow-11 hover:underline"
+				href="https://mietencheck.de/datenschutz"
+			>
+				{t("Datenschutz")}
 			</a>
-			<a class="text-base-medium text-yellow-11 hover:underline" href="">
-				Impressum
+			<a
+				class="text-base-medium text-yellow-11 hover:underline"
+				href="https://mietencheck.de/impressum"
+			>
+				{t("Impressum")}
 			</a>
 		</div>
 	</div>
