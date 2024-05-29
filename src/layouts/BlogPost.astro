@@ -10,44 +10,44 @@ const { title, description, heroImage } = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-	</head>
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
 
-	<body>
-		<Header />
-		<main>
-			<article>
-				<div
-					class="flex flex-col items-center bg-purple-9 pt-12 pb-40 md:pb-48"
-				>
-					<div class="container text-center">
-						<a
-							href="/"
-							class="inline-block text-lg-medium text-yellow-9 text-center mb-5 sm:mb-6"
-						>
-							Ratgeber
-						</a>
-						<h3
-							class="title-36 sm:title-40 md:title-48 lg:title-56 text-yellow-9 text-center max-w-[768px] mx-auto"
-						>
-							{title}
-						</h3>
-					</div>
-				</div>
+  <body>
+    <Header />
+    <main>
+      <article>
+        <div
+          class="flex flex-col items-center bg-purple-9 pt-12 pb-40 md:pb-48"
+        >
+          <div class="container text-center">
+            <a
+              href="/"
+              class="inline-block text-lg-medium text-yellow-9 text-center mb-5 sm:mb-6"
+            >
+              Ratgeber
+            </a>
+            <h3
+              class="title-36 sm:title-40 md:title-48 lg:title-56 text-yellow-9 text-center max-w-[768px] mx-auto"
+            >
+              {title}
+            </h3>
+          </div>
+        </div>
 
-				<div class="container flex flex-col items-center -mt-24">
-					<img
-						class="w-full aspect-[8/5] object-cover max-w-[768px]"
-						src=`${import.meta.env.BASE_URL}/${heroImage}`
-						alt=""
-					/>
-					<div class="prose w-full max-w-[560px] prose-purple py-16">
-						<slot />
-					</div>
-				</div>
-			</article>
-		</main>
-		<Footer />
-	</body>
+        <div class="container flex flex-col items-center -mt-24">
+          <img
+            class="w-full aspect-[8/5] object-cover max-w-[768px]"
+            src=`/${heroImage}`
+            alt=""
+          />
+          <div class="prose w-full max-w-[560px] prose-purple py-16">
+            <slot />
+          </div>
+        </div>
+      </article>
+    </main>
+    <Footer />
+  </body>
 </html>
