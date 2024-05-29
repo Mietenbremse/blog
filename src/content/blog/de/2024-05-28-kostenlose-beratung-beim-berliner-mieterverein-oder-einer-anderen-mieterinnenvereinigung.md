@@ -2,6 +2,7 @@
 title: Kostenlose Beratung beim Berliner Mieterverein oder einer anderen
   Mieter*innenvereinigung
 description: Lorem ipsum dolor sit amet
+heroImage: images/beratung-durch-mieterverein.png
 pubDate: 2024-05-28
 featured: false
 ---
