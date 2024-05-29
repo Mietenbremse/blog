@@ -1,6 +1,7 @@
 ---
 title: Prozesskosten und andere Risiken
 description: lopus
+heroImage: images/prozesskosten.png
 pubDate: 2024-05-28
 featured: false
 ---
