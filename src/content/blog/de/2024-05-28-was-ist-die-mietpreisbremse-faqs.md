@@ -2,7 +2,7 @@
 title: Was ist die Mietpreisbremse? (FAQs)
 description: Lopus diem
 pubDate: 2024-05-28
-featured: false
+featured: true
 ---
 1) Was ist die Mietpreisbremse?
 
