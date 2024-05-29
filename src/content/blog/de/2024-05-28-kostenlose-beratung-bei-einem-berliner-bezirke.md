@@ -1,10 +1,9 @@
 ---
-title: Kostenlose Beratung bei einem Berliner Bezirke
-description: "Lorem ipsum dolor sit amet"
+title: Kostenlose Beratung in den Berliner Bezirken
+description: Lorem ipsum dolor sit amet
 pubDate: 2024-05-28
 featured: false
 ---
-
 Alle Berliner Bezirke bieten kostenlose Mieter\*innenberatung an, die alle Bewohner\*innen des Bezirks nutzen können. Am besten druckst du dir dein Ergebnis aus und bringst es mit in die Beratung. Die Mietrechts-Expert\*innen können dir eine Einschätzung zu deinem Ergebnis geben und dich zu den weiteren Schritten beraten.
 
 Hier findest du eine Übersicht zu den Beratungen in den Bezirken: [https://www.berlin.de/sen/wohnen/service/serviceadressen/mieterberatungen-in-den-bezirken/](https://www.berlin.de/sen/wohnen/service/serviceadressen/mieterberatungen-in-den-bezirken/)
