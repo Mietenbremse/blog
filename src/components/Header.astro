@@ -5,7 +5,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<script>
+<script is:inline>
   const button = document.getElementById("togglemenu");
   const header = document.getElementsByTagName("header")[0];
   const mobilenav = document.getElementById("mobilenav");

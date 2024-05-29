@@ -1,12 +1,12 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import FeaturedBlogPostsSection from "../../components/FeaturedBlogPostsSection.astro";
-import BlogPostsGridSection from "../../components/BlogPostsGridSection.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import FeaturedBlogPostsSection from "../components/FeaturedBlogPostsSection.astro";
+import BlogPostsGridSection from "../components/BlogPostsGridSection.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
-import { getLangFromUrl } from "../../i18n/utils";
+import { getLangFromUrl } from "../i18n/utils";
 
 const posts = (
   await getCollection("blog", ({ slug }) => {

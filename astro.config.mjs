@@ -19,10 +19,5 @@ export default defineConfig({
   i18n: {
     defaultLocale: "de",
     locales: ["de", "en"],
-    routing: {
-      prefixDefaultLocale: true,
-    },
   },
-  // soft redirect, just in case we ever want to change this
-  redirects: { "/": { status: 302, destination: "/de" } },
 });
