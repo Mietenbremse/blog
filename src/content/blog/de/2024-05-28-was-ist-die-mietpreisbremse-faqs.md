@@ -1,11 +1,10 @@
 ---
 title: Was ist die Mietpreisbremse?
-description: ""
+description: FAQ
 heroImage: images/mietpreisbremse-faq.png
 pubDate: 2024-05-28
 featured: true
 ---
-
 1. Was ist die Mietpreisbremse?
 
 Die Mietpreisbremse ist ein Gesetz, das den rasanten Anstieg der Mietpreise bremsen soll. Die Mietpreisbremse soll einerseits verhindern, dass neue Mietverträge mit zu hohen Mietpreisen abgeschlossen werden und andererseits ermöglichen, dass zu hohe Mieten gesenkt werden.
