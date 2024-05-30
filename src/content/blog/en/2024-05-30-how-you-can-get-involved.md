@@ -1,11 +1,10 @@
 ---
 title: How you can get involved?
-pubDate: 2024-05-30
+description: Inform your neighbours if your rent is too high
 heroImage: images/beratung-durch-mieterverein.png
-description: ""
+pubDate: 2024-05-30
 featured: false
 ---
-
 You can help to ensure that fewer people pay too much rent. When we join forces, we are stronger:  
      - Inform your neighbours if your rent is too high. It's likely that your neighbours feel the same way. Many don't know that they can take action against high rents. We have some ideas for you on how you can inform your neighbours and network with them. You can put up notices in the hallway, put flyers in the letterbox or invite them to a tenants' meeting.
 
