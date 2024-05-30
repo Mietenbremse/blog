@@ -1,11 +1,11 @@
 ---
 title: Prozesskosten und andere Risiken
-description: ""
+description: Welche Risiken und möglichen Kosten können im Falle von jurstischen
+  Schritte entstehen?
 heroImage: images/prozesskosten.png
 pubDate: 2024-05-28
 featured: false
 ---
-
 Wenn du keine Rechtsschutzversicherung hast, musst du die Kosten des Prozesses selber tragen. Aber nur, wenn der Prozess verloren geht, ansonsten zahlt die Gegenseite. Das gilt auch für die eigenen Anwält\*innenkosten. Verliert man zum Teil, muss man im gleichen Anteil die Kosten tragen. Bei einer Einigung werden die Kosten oft hälftig geteilt, das kann aber verhandelt werden.
 
 Die Kosten vorab abzuschätzen ist schwierig, da sie vom Streitwert abhängen und dieser wiederum von vielen verschiedenen Faktoren abhängt:
