@@ -1,11 +1,11 @@
 ---
 title: Was du tun kannst!
+description: "Gemeinsam etwas bewegen: vom Rechner, in die Nachbarschaft und in
+  die Mietenbewegung"
 heroImage: images/beratung-durch-mieterverein.png
 pubDate: 2024-05-28
-description: ""
 featured: false
 ---
-
 Du kannst dazu beitragen, dass weniger Menschen zu viel Miete zahlen. Wenn wir uns zusammentun, sind wir stärker:
 
 - Informiere deine Nachbar\*innen, wenn deine Miete zu hoch ist. Es ist wahrscheinlich, dass es deinen Nachbar\*innen ähnlich geht. Viele wissen nicht, dass sie gegen hohe Mieten vorgehen können. Wir haben einige Ideen für dich, wie du deine Nachbar\*innen informieren und dich mit ihnen vernetzen kannst. Du kannst Zettel im Flur aufhängen, Flyer in den Briefkasten werfen oder zu einer Mieterversammlung einladen.
